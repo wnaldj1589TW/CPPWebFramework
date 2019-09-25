@@ -159,6 +159,10 @@ void FilterChain::doFilter(CWF::Request &request, CWF::Response &response)
             else
                 request.getRequestDispatcher(STATUS::STATUS_401).forward(request, response);
         }
+        else if (extention == FILE_EXTENTION::PGM)
+        {
+            write(response, path, url, HTTP::CONTENT_TYPE, HTTP::MULTIPART_FORM_DATA);
+        }
         else
         {
             response.setStatus(Response::SC_NOT_FOUND, STATUS::NOT_FOUND);

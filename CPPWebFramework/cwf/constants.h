@@ -134,6 +134,7 @@ namespace HTTP
     const QByteArray CONTENT_DISPOSITION_COLON        = "Content-Disposition:";
     const QByteArray CONTENT_DISPOSITION_COLON_SPACE  = "Content-Disposition: ";
     const QByteArray MULTIPART                        = "multipart";
+    const QByteArray MULTIPART_FORM_DATA              = "multipart/form-data;o";
     const QByteArray URLENCODED                       = "urlencoded";
     const QByteArray COOKIE                           = "Cookie";
     const QByteArray SET_COOKIE                       = "Set-Cookie: ";
@@ -260,6 +261,7 @@ namespace FILE_EXTENTION
     const QByteArray TTF  = "ttf";
     const QByteArray WOFF = "woff";
     const QByteArray WOFF2= "woff2";
+    const QByteArray PGM  = "pgm";
 }
 
 CWF_END_NAMESPACE
