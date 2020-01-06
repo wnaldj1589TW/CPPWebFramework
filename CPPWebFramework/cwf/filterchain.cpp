@@ -149,16 +149,6 @@ void FilterChain::doFilter(CWF::Request &request, CWF::Response &response)
         {
             write(response, path, url, HTTP::CONTENT_TYPE, HTTP::APPLICATION_FONT_TTF);
         }
-        else if(extention == FILE_EXTENTION::INI)
-        {
-            QString file(CWF::FileManager::fileName(url));
-            if(file != CONFIGURATION::CPP_WEB_INI)
-                write(response, path, url, HTTP::CONTENT_TYPE, ("text/" + extention.toLatin1() + "; charset=UTF-8") );
-            else if(configuration.getAccessServerPages())
-                write(response, path, url, HTTP::CONTENT_TYPE, ("text/" + extention.toLatin1() + "; charset=UTF-8") );
-            else
-                request.getRequestDispatcher(STATUS::STATUS_401).forward(request, response);
-        }
         else if (extention == FILE_EXTENTION::PGM)
         {
             write(response, path, url, HTTP::CONTENT_TYPE, HTTP::MULTIPART_FORM_DATA);
