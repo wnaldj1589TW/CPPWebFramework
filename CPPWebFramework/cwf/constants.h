@@ -262,6 +262,7 @@ namespace FILE_EXTENTION
     const QByteArray WOFF = "woff";
     const QByteArray WOFF2= "woff2";
     const QByteArray PGM  = "pgm";
+    const QByteArray YAML = "yaml";
 }
 
 CWF_END_NAMESPACE

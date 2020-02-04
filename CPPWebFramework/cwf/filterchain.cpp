@@ -153,6 +153,10 @@ void FilterChain::doFilter(CWF::Request &request, CWF::Response &response)
         {
             write(response, path, url, HTTP::CONTENT_TYPE, HTTP::MULTIPART_FORM_DATA);
         }
+        else if (extention == FILE_EXTENTION::YAML)
+        {
+            write(response, path, url, HTTP::CONTENT_TYPE, HTTP::MULTIPART_FORM_DATA);
+        }
         else
         {
             response.setStatus(Response::SC_NOT_FOUND, STATUS::NOT_FOUND);
